@@ -1,0 +1,54 @@
+<head>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <title>Login</title>
+  <style>
+
+    .flag {
+        height: 50px;
+    }
+    .blue {
+        background-color: #002B7F;
+        color: white;
+        text-align: center;
+    }
+    .yellow {
+        background-color: #FCD116;
+        text-align: center;
+    }
+    .red {
+        background-color: #CE1126;
+        color: white;
+        text-align: center;
+    }
+</style>
+</head>
+
+
+{% block content %}
+<div class="container">
+  <div class="row flag">
+      <div class="col blue"><h1>Romania's 2024</h1></div>
+      <div class="col yellow"><h1>Presidential</h1></div>
+      <div class="col red"><h1>Elections</h1></div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+    <h2>Login</h2>
+    <form method="post" class="form-group">
+      <p>Not registered? <a href="{% url 'register' %}">Click here</a> to be redirected</p>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+  </div>
+    </div>
+    </form>
+  </div>
+{% endblock %}
