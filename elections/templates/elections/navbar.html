@@ -1,41 +1,30 @@
-<head>
-  <style>
+<style>
+
+    .flag {
+        height: 50px;
+    }
     .blue {
-      background-color: #002B7F;
-  }
-  .yellow {
-      background-color: #FCD116;
-  }
-  .red {
-      background-color: #CE1126;
-  }
-  </style>
-</head>
+        background-color: #002B7F;
+        color: white;
+        text-align: center;
+    }
+    .yellow {
+        background-color: #FCD116;
+        text-align: center;
+    }
+    .red {
+        background-color: #CE1126;
+        color: white;
+        text-align: center;
+    }
+</style>
 
 
-
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <div class="row w-100">
-            <div class="col-4 blue">
-                <a class="navbar-brand text-white" href="#">Welcome to: </a>
-                <ul class="navbar-nav">
-                </ul>
-            </div>
-            <div class="col-4 yellow">
-                <ul class="navbar-nav">
-                   
-                </ul>
-            </div>
-            <div class="col-4 red">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <form method="post" action="{% url 'logout' %}">
-                        {% csrf_token %}
-                        <button type="submit" class="nav-link btn-link text-white">Logout</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<div class="container">
+    <div class="row flag">
+        <div class="col blue"><h1>Romania's 2024</h1></div>
+        <div class="col yellow"><h1>Presidential</h1></div>
+        <div class="col red"><h1>Elections</h1></div>
     </div>
-</nav>
+  </div>
+  <ul></ul>
